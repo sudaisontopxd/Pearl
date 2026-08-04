@@ -1,0 +1,44 @@
+local Scripts = {
+    [6862593685] = "https://raw.githubusercontent.com/username/repo/main/SpeedEscape.lua",
+    [6117622998] = "https://raw.githubusercontent.com/username/repo/main/99Nights.lua",
+    [92058723]   = "https://raw.githubusercontent.com/username/repo/main/AdoptMe.lua",
+    [5857945037] = "https://raw.githubusercontent.com/username/repo/main/AnimalHospital.lua",
+    [6850022467] = "https://raw.githubusercontent.com/username/repo/main/AnimeExpedition.lua",
+    [4734533036] = "https://raw.githubusercontent.com/username/repo/main/AOTR.lua",
+    [4724853037] = "https://raw.githubusercontent.com/username/repo/main/LuckyBlock.lua",
+    [4773531303] = "https://raw.githubusercontent.com/username/repo/main/BladeBall.lua",
+    [6909470984] = "https://raw.githubusercontent.com/username/repo/main/CatchABrainrot.lua",
+    [5321856333] = "https://raw.githubusercontent.com/username/repo/main/DandysWorld.lua",
+    [6022830302] = "https://raw.githubusercontent.com/username/repo/main/Fisch.lua",
+    [6881734685] = "https://raw.githubusercontent.com/username/repo/main/FishIt.lua",
+    [9199655655] = "https://raw.githubusercontent.com/username/repo/main/Gakuran.lua",
+    [5635398286] = "https://raw.githubusercontent.com/username/repo/main/JujutsuShenanigans.lua",
+    [3489832269] = "https://raw.githubusercontent.com/username/repo/main/MVS.lua",
+    [5717757973] = "https://raw.githubusercontent.com/username/repo/main/RestaurantTycoon3.lua",
+    [6088820386] = "https://raw.githubusercontent.com/username/repo/main/Rivals.lua",
+    [1168263260] = "https://raw.githubusercontent.com/username/repo/main/TDS.lua"
+}
+
+local universeId = game.GameId
+local scriptUrl = Scripts[universeId]
+
+if not scriptUrl then
+    warn(("No loader configured for universe %d"):format(universeId))
+    return
+end
+
+local ok, source = pcall(game.HttpGet, game, scriptUrl)
+
+if not ok then
+    warn("Couldn't download script.")
+    return
+end
+
+local chunk, err = loadstring(source)
+
+if not chunk then
+    warn(err)
+    return
+end
+
+chunk()
