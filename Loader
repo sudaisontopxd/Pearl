@@ -30,7 +30,7 @@ end
 local ok, source = pcall(game.HttpGet, game, scriptUrl)
 
 if not ok then
-    warn("Couldn't download script.")
+    warn("Couldn't fetch script.")
     return
 end
 
